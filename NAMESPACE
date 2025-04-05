@@ -1,0 +1,3 @@
+export(
+get_range, get_samplesize, make_zones, XC, dst2svect, dst2graph, GRex, ERex, SRex, FCex
+)

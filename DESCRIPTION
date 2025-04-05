@@ -1,0 +1,18 @@
+Package: conexus
+Type: Package
+Title: Network approaches for biological conservation assessments
+Description: This package implements network approaches to assess the biological conservation assessments of species. The background is described in: El Graoui, M., M.E. Ghanem, M. Amri, R.J. Hijmans, 2025. A distance-based framework for assessing the ex-situ conservation status of plants. Submitted for publication. 
+Version: 1.1-0
+Date: 2025-04-02
+Depends: R (>= 3.5.0)
+Imports: terra, igraph
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Maintainer: Robert Hijmans <r.hijmans@gmail.com>
+Encoding: UTF-8
+License: GPL (>=3)
+BugReports: https://github.com/rspatial/terra/issues/
+LazyLoad: yes
+Authors@R: c(
+	person("Marwa", "El Graoui", role="aut"),
+    person("Robert J.", "Hijmans", role=c("cre", "aut"), email="r.hijmans@gmail.com", comment=c(ORCID = "0000-0003-2392-6140")))
