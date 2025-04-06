@@ -10,7 +10,7 @@ Divide a species' range into \code{n} zones of approximately equal area
 }
 
 \usage{
-make_zones(x, range, n, spread=TRUE)
+make_zones(x, range, n, spread=TRUE, iter.max=25)
 }
 
 \arguments{
@@ -18,6 +18,7 @@ make_zones(x, range, n, spread=TRUE)
 \item{range}{SpatVector with the species' adjusted range}
 \item{n}{positive integer. The number of zones to create}
 \item{spread}{logical. If \code{TRUE}, seeds are used for the k-means allocated by the size of the subpolygons}
+\item{iter.max}{positive integer. The maximum number of iterations. See \code{\link[stats]{kmeans}}}
 }
 
 \value{

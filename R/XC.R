@@ -42,7 +42,7 @@ get_EnvDist <- function(env, regions, envfun) {
 }
 
 
-make_zones <- function(x, range, n, spread=TRUE) {
+make_zones <- function(x, range, n, spread=TRUE, iter.max=25) {
 
 	if (spread) { # spread sample across polygons
 		drange <- terra::disagg(range)
@@ -75,8 +75,7 @@ make_zones <- function(x, range, n, spread=TRUE) {
 		}) 
 			
 		seeds <- terra::crds(terra::vect(seeds))
-		
-		km <- terra::k_means(terra::mask(x, rr), seeds, iter.max = 25)
+		km <- terra::k_means(terra::mask(x, rr), seeds, iter.max=iter.max)
 	} else {
 
 		xm <- terra::mask(x, range)
